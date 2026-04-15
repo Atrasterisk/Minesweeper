@@ -1,19 +1,21 @@
 # Minesweeper Soroban Smart Contract 💣
 
-Proyek ini adalah implementasi permainan klasik **Minesweeper** menggunakan [Soroban SDK](https://soroban.stellar.org/) untuk jaringan Stellar. Smart contract ini memungkinkan pemain untuk menginisialisasi papan permainan, membuka kotak, dan melacak status permainan (menang/kalah) secara *on-chain*.
+This project is an implementation of the classic **Minesweeper** game using the [Soroban SDK](https://soroban.stellar.org/) for the Stellar network. This smart contract allows players to initialize a game board, reveal squares, and track the game status (win/loss) *on-chain*.
 
-## 🌟 Fitur Utama
+## 🌟 Key Features
 
-- **Inisialisasi Dinamis (`init_game`)**: Pemain dapat membuat papan permainan dengan ukuran (*width* & *height*) dan jumlah ranjau (*mine_count*) yang dapat dikustomisasi.
-- **Sistem Keamanan**: Memastikan jumlah ranjau tidak melebihi atau sama dengan ukuran papan permainan (mencegah *bug* logika).
-- **Mekanik Reveal (`reveal`)**: Membuka kotak di koodinat `(x, y)`. Mengembalikan jumlah ranjau di sekitar kotak (0-8), atau `99` jika pemain mengenai ranjau (BOOM!).
-- **Status Permainan (`get_status`)**: Mengecek kondisi papan, ranjau yang ada, dan kotak yang sudah dibuka oleh pemain.
-- **Penyimpanan Aman**: Menggunakan `persistent storage` dari Soroban agar *state* permainan masing-masing *user* tersimpan dengan aman dan spesifik berdasarkan alamat (*address*) mereka.
+- **Dynamic Initialization (`init_game`)**: Players can create a game board with customizable dimensions (*width* & *height*) and number of mines (*mine_count*).
+- **Safety System**: Ensures the number of mines does not exceed or equal the total size of the game board (preventing logic bugs).
+- **Reveal Mechanic (`reveal`)**: Reveals a square at coordinates `(x, y)`. Returns the number of adjacent mines (0-8), or `99` if the player hits a mine (BOOM!).
+- **Game Status (`get_status`)**: Checks the condition of the board, the existing mines, and the squares that have already been revealed by the player.
+- **Secure Storage**: Utilizes Soroban's `persistent storage` so that each user's game state is safely stored and mapped specifically to their address.
 
-## 🛠 Prasyarat
+## 🛠 Prerequisites
 
-Sebelum mulai melakukan *compile* atau *deploy*, pastikan Anda sudah menginstal:
+Before you start compiling or deploying, make sure you have installed:
 1. [Rust](https://www.rust-lang.org/tools/install)
-2. Target WebAssembly (WASM):
+2. WebAssembly (WASM) Target:
    ```bash
    rustup target add wasm32-unknown-unknown
+   ```
+EOF
