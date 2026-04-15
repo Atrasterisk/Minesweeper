@@ -18,4 +18,5 @@ Before you start compiling or deploying, make sure you have installed:
    ```bash
    rustup target add wasm32-unknown-unknown
    ```
-EOF
+## 🚀 Testnet Deployment
+Contract ID: CDRKQG4F6KR66YMYARWRSYKZIZP2KC64JVEOPQAM674ARGY5TLF3BCGF
